@@ -472,7 +472,7 @@ nav ul li a:hover {
 }
 
 .btn-view:hover {
-  background: #ff1e3a;
+  background: #c49b3f;
   transform: translateY(-3px);
 }
 
@@ -939,6 +939,7 @@ header {
     padding: 10px 18px;
   }
 }
+
 
 
 
