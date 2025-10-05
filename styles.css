@@ -940,6 +940,50 @@ header {
   }
 }
 
+@media (max-width: 768px) {
+  footer {
+    padding: 30px 20px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .footer-links {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .logo {
+    font-size: 42px;
+  }
+
+  .logo span {
+    font-size: 46px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}
+
 
 
 
