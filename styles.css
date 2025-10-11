@@ -133,17 +133,17 @@ nav ul li a:hover {
 .social-icon a:hover {
   color: #ffffff;
 }
-.freelancer-icon img {
+.freelancer-icon svg {
+  fill: #c49b3f;
+  transition: transform 0.3s ease, fill 0.3s ease;
   vertical-align: middle;
-  filter: invert(62%) sepia(52%) saturate(408%) hue-rotate(14deg) brightness(96%) contrast(92%);
-  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Hover effect to turn white like others */
-.freelancer-icon img:hover {
-  filter: brightness(0) invert(1);
+.freelancer-icon svg:hover {
+  fill: #ffffff;
   transform: scale(1.2);
 }
+
 .btn {
   display: inline-block;
   margin-top: 15px;
@@ -993,6 +993,7 @@ header {
     font-size: 12px;
   }
 }
+
 
 
 
