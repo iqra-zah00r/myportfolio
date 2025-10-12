@@ -67,4 +67,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+document.querySelector(".contact-form").addEventListener("submit", function (e) {
+    // Get form fields
+    const name = document.querySelector('input[name="name"]');
+    const email = document.querySelector('input[name="email"]');
+    const message = document.querySelector('textarea[name="message"]');
+
+    // Basic validation patterns
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Clear any previous errors
+    document.querySelectorAll(".error").forEach(el => el.remove());
+
+    let isValid = true;
+
+    // Validate Name
+    if (name.value.trim() === "") {
+      showError(name, "Please enter your name");
+      isValid = false;
+    }
+
+    // Validate Email
+    if (!emailPattern.test(email.value.trim())) {
+      showError(email, "Please enter a valid email address");
+      isValid = false;
+    }
+
+    // Validate Message
+    if (message.value.trim().length < 10) {
+      showError(message, "Message must be at least 10 characters long");
+      isValid = false;
+    }
+
+    // Stop form submission if invalid
+    if (!isValid) {
+      e.preventDefault();
+    }
+
+    // Function to show error message
+    function showError(input, message) {
+      const error = document.createElement("small");
+      error.classList.add("error");
+      error.style.color = "red";
+      error.textContent = message;
+      input.parentNode.insertBefore(error, input.nextSibling);
+    }
+  });
+
+
+
+
 
